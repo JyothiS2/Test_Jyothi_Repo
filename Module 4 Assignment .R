@@ -1,3 +1,7 @@
+# here is the code results blog link
+
+#####https://swayamrassignment.blogspot.com/2022/02/module-4-programming-structure-in-r.html
+
 # Converting data into vectors
 freq <- c("0.6","0.3","0.4","0.4","0.2","0.6","0.3","0.4","0.9","0.2")
 bloodp <- c("103","87","32","42","59","109","78","205","135","176")
