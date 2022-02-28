@@ -1,0 +1,35 @@
+---
+title: "S3-S4 Blog"
+date: "28/02/2022"
+---
+
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(pryr)
+
+## generating a dummy data.
+
+data <- data.frame(a = c(1:5),b = c(6:10),c = letters[1:5])
+
+
+
+ftype(print) 
+
+## Checking if print is a generic function
+
+print(data)
+
+
+# Our data is already an s3 object, but if it weren't we could convert it to S3 by modifying its class property.
+
+data_s3 = data
+class(data_s3) = "DummyData"
+otype(data_s3)
+
+## S4 object
+
+setClass("DummyData", slots=list(a="numeric", b="numeric", c="character"))
+data_s4 = new("DummyData", a = data$a, b = data$b, c = data$c)
+otype(data_s4)
+
